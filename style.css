@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  perspective: 1000px;
+  width: 480px;
+  height: 720px;
+  margin: 120px auto 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  transform-style: preserve-3d;
+  width: 420px;
+  height: 630px;
+  border-radius: 14px;
+  box-shadow: 0 0 10px rgba(99, 99, 99, 0.3), 0 5px 6px rgba(99, 99, 99, 0.3);
+}
+.imgbox {
+  transform-style: preserve-3d;
+  position: relative;
+}
+.imgbox img {
+  position: relative;
+  display: block;
+  width: 350px;
+  margin: 0 auto;
+  z-index: 2;
+  transition: all 0.5s ease;
+}
+.circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 270px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.644),
+    rgba(0, 0, 0, 0.644),
+    rgb(23, 255, 243)
+  );
+  border-radius: 50%;
+  z-index: 1;
+  opacity: 0.7;
+}
+.desc {
+  transform-style: preserve-3d;
+  width: 90%;
+  margin: -20px auto 46px;
+  font-family: Arial;
+}
+.desc h1 {
+  font-size: 30px;
+  text-align: center;
+  margin: 6px auto 16px;
+  transition: all 0.5s ease;
+}
+.desc h2 {
+  font-size: 20px;
+  text-align: justify;
+  font-weight: normal;
+  line-height: 1.5;
+  margin: 6px auto 16px;
+  transition: all 0.5s ease;
+}
+.processor {
+  width: 72%;
+  display: flex;
+  justify-content: space-between;
+  margin: 34px auto;
+}
+.processor button {
+  width: 33px;
+  height: 30px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  border-radius: 2px;
+  border: none;
+  box-shadow: 0 0 3px #666;
+  cursor: pointer;
+}
+.processor button.active {
+  background-color: #444;
+  color: #fff;
+}
+.buybox {
+  width: 90%;
+  margin: 16px auto;
+  /* border: 2px solid blueviolet; */
+}
+.buybox button {
+  width: 100%;
+  height: 36px;
+  border: none;
+  font-size: 18px;
+  background-color: #0bf2f2;
+  border-radius: 6px;
+  box-shadow: 0 0 5px #0d1b49;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.buybox button:hover {
+  background-color: #444;
+  color: #0bf2f2;
+}
